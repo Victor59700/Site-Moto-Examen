@@ -1,0 +1,62 @@
+.registration-container {
+  max-width: 800px;
+  /* Ajustez la largeur maximale selon vos préférences */
+  margin: 65px auto;
+  /* Centrer le formulaire avec une marge en haut et en bas */
+  padding: 30px;
+  border: 2px solid #ff6600;
+  /* Couleur de la bordure */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  /* Couleur d'arrière-plan */
+}
+
+.registration-container h2 {
+  text-align: center;
+  color: #333;
+  /* Couleur du texte du titre */
+}
+
+.registration-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #555;
+  /* Couleur du texte des libellés */
+}
+
+.registration-form input {
+  width: 100%;
+  padding: 10px;
+  /* Augmentez la taille du rembourrage pour un look plus spacieux */
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  /* Couleur de la bordure des champs de saisie */
+  border-radius: 4px;
+}
+
+.registration-form button {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 12px 20px;
+  /* Augmentez la taille du bouton */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 310px;
+}
+
+.registration-form button:hover {
+  background-color: #000000;
+}
+
+
+@media screen and (max-width: 480px) {
+  .registration-container button {
+    margin: 30px auto;
+    /* Ajuster la marge pour les écrans plus petits */
+    padding: 20px;
+    /* Ajuster le rembourrage pour les écrans plus petits */
+  }
+}

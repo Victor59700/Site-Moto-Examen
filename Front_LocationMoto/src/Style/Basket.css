@@ -1,0 +1,54 @@
+.Card {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 2px solid #ff6600;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.Card h2 {
+  text-align: center;
+  color: #000000;
+}
+
+.Card button {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 237px;
+}
+
+.Card button:hover {
+  background-color: #000000;
+}
+
+
+
+.BoutonAccueil button {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-left: 15px;
+}
+
+/*CSS commun avec (Basket, LoginPage, RegistrationPage)*/
+
+
+@media screen and (max-width: 480px) {
+  .Card button {
+    max-width: 90%;
+    margin: 50px auto;
+  }
+}

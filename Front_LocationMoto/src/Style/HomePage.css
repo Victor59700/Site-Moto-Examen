@@ -1,0 +1,241 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.Picture {
+  width: 100%;
+  height: 100%;
+}
+
+.Container {
+  height: 710px;
+  position: relative;
+
+}
+
+.OverlayText {
+  position: absolute;
+  top: 1px;
+  color: rgb(255, 255, 255);
+  margin-top: 290px;
+  animation: slideIn 3s;
+  opacity: 1;
+  /* Le contenu devient complètement opaque à la fin de l'animation */
+
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    /* Le contenu est déplacé vers la gauche */
+    opacity: 0;
+    /* Le contenu devient complètement opaque à la fin de l'animation */
+  }
+
+  to {
+    opacity: 1;
+    /* Le contenu devient complètement opaque à la fin de l'animation */
+    transform: translateX(0);
+    /* Le contenu revient à sa position initiale */
+  }
+}
+
+
+
+button.ButtonHome {
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background-color: #ff6600;
+  left: 10px;
+  position: fixed;
+  z-index: 10000;
+  border-radius: 10px;
+
+}
+
+button.ButtonHome:nth-child(1) {
+  top: 35%;
+}
+
+button.ButtonHome:nth-child(2) {
+  top: 41%;
+}
+
+button.ButtonHome:nth-child(3) {
+  top: 47%;
+}
+
+button.ButtonHome:nth-child(4) {
+  top: 53%;
+}
+
+button.ButtonHome:nth-child(5) {
+  top: 59%;
+}
+
+.horizontal-video {
+  object-fit: cover;
+}
+
+
+
+.horizontal-video::-webkit-media-controls {
+  display: none;
+}
+
+.presentation {
+  margin-top: 500px;
+  text-align: center;
+  margin-right: 800px;
+  margin-top: 50px;
+  margin-left: 170px;
+  animation: slide 3s;
+
+}
+
+
+.Picturelocation {
+  margin-left: 900px;
+  width: 500px;
+  height: 450px;
+  border-radius: 10px;
+  margin-top: -360px;
+  animation: slide 3s;
+
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+    /* Le contenu est déplacé vers la gauche */
+    opacity: 0;
+    /* Le contenu devient complètement opaque à la fin de l'animation */
+  }
+
+  to {
+    opacity: 1;
+    /* Le contenu devient complètement opaque à la fin de l'animation */
+    transform: translateX(0);
+    /* Le contenu revient à sa position initiale */
+  }
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
+.Maps {
+
+  height: 30%;
+  margin-top: 39px;
+
+}
+
+
+.Contact {
+  height: 29%;
+  width: 100%;
+  background-color: black;
+  margin-top: -16px;}
+
+
+.Horaire {
+
+  margin-left: 100px;
+  margin-top: -7px;
+  color: #ff6600;
+}
+
+
+.Adresse {
+
+  margin-left: 1400px;
+  margin-top: -185px;
+  color: #ff6600;
+
+}
+
+.Réseaux {
+  margin-top: -140px;
+  margin-left: -1100px;
+  color: #ff6600;
+
+
+}
+
+
+
+.Réseaux img {
+  height: 50px;
+  width: 50px;
+  margin-left: 15px;
+
+}
+
+
+
+.LogoRéseaux {
+  margin-left: 1293px;
+
+}
+
+
+h3 {
+  background-color: rgba(255, 102, 0, 0.8);
+  /* Utilisation de rgba pour la transparence */
+  text-align: center;
+  color: #055791;
+  margin-left: 1%;
+  width: 480px;
+  border-radius: 10px;
+  border: 2px solid #055791;
+}
+
+.TexteForme {
+  margin-top: -220px;
+  text-align: center;
+  margin-left: 40%;
+  width: 500px;
+  color: #ffffff;
+  border: 5px solid #055791;
+  backdrop-filter: blur(12px);
+  /* Ajout du flou au fond */
+  border-radius: 20px;
+
+}
+
+
+.TextHome {
+
+  margin-top: -400px;
+  text-align: center;
+  margin-left: 230%;
+  width: 500px;
+  color: #ffffff;
+  border: 5px solid #055791;
+  backdrop-filter: blur(12px);
+  /* Ajout du flou au fond */
+  border-radius: 20px;
+
+}
+
+
+.LogoRéseaux img {
+  border: 2px solid rgb(199, 96, 0);
+  /* Ajout d'un cadre autour des images */
+  padding: 1px;
+  /* Ajout de marge intérieure pour espacer le cadre des images */
+  border-radius: 10px;
+
+
+}

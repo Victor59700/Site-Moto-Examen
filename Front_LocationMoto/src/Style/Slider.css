@@ -1,0 +1,97 @@
+.slider-container {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 300px;
+  background-color: transparent;
+  width: 100%;
+}
+
+.arrow {
+  position: absolute;
+  top: 150%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  background-color: transparent;
+  border: none;
+}
+
+.arrow.left {
+  left: 290px;
+  width: 60px;
+  background-color: #ff6600;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: -400px;
+
+
+}
+
+.arrow.right {
+  right: 290px;
+  background-color: #ff6600;
+  width: 60px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: -400px;
+}
+
+.slide {
+  position: relative;
+}
+
+.imgContainer img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+
+  margin-top: 100px;
+}
+
+.infocontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+  color: aliceblue;
+  position: absolute;
+  width: 100%;
+  bottom: 10%;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: -70px;
+  color: #ff6600;
+}
+
+
+
+.carousel .slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+}
+
+.carousel .imgContainer {
+  flex: 1;
+  max-width: 50%;
+}
+
+
+
+.imgContainer img {
+  height: 500px;
+  margin-bottom: 70px;
+
+
+}
+
+.svg-inline--fa {
+
+
+  margin-left: 19px;
+}
