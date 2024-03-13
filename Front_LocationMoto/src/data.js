@@ -3,7 +3,7 @@ import "./Style/Data.css";
 export const slidMoto = [
   {
     id: 1,
-    img: "https://cdn.discordapp.com/attachments/1188779583017861120/1200027657790820452/20230903_154459_HDR.jpg?ex=65e999d9&is=65d724d9&hm=a05faa73fab28ab43f7e3802af0daecaaa015d8b51e1996b957796526a0ec35b&",
+    img: "https://cdn.discordapp.com/attachments/1188779583017861120/1200027657790820452/20230903_154459_HDR.jpg?ex=65fc0ed9&is=65e999d9&hm=93d130fdf589ad54a83560f86d0b7025a832c3d4dfbd7bee1c7359b826661b87&",
     title: "SPORTSTER 883 LOW",
   },
 

@@ -1,18 +1,42 @@
 import React from "react";
 import "../Style/Basket.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const Basket = () => {
+const Basket = ({ selectedMoto, removeFromCart }) => {
+  const navigate = useNavigate();
+
+  const handleValidation = () => {
+    navigate("/homepage");
+  };
+
+  const handleRemove = () => {
+    removeFromCart();
+  };
+
   return (
     <>
       <div className="BoutonAccueil">
         <Link to="/homepage">
-          <button>Retour à Accueil</button>
+          <button>Retour à l'accueil</button>
         </Link>
       </div>
       <div className="Card">
         <h2>Ma réservation</h2>
-        <button>Valider</button>
+        {selectedMoto ? (
+          <div className="SelectedMoto">
+            <h3>Moto sélectionnée :</h3>
+            <p><img src={selectedMoto.image_url} alt={selectedMoto.modele} /></p>
+            <p>Modèle : {selectedMoto.modele}</p>
+            <p>Année : {selectedMoto.annee}</p>
+            <p>Permis : {selectedMoto.permis}</p>
+            <p>Type : {selectedMoto.type_moto}</p>
+            <p>Tarif journalier : {selectedMoto.prix_journalier} Euros</p>
+            <button onClick={handleRemove}>Supprimer</button>
+          </div>
+        ) : (
+          <p>Aucune moto sélectionnée</p>
+        )}
+        <button onClick={handleValidation}>Valider</button>
       </div>
     </>
   );

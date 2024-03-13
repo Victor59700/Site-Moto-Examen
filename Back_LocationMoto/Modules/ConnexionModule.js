@@ -6,12 +6,6 @@ const loginService = require('../Services/ConnexionService');
 const SECRET = "js15544+-!/kJDHDYDU05";
 
 
-
-
-
-
-
-
 const comparePasswords = async (password, hashedPassword) => {
     try {
         const match = await bcrypt.compare(password, hashedPassword);
@@ -21,7 +15,6 @@ const comparePasswords = async (password, hashedPassword) => {
         throw error;
     }
 };
-
 
 
 router.post('/', async (req, res) => {

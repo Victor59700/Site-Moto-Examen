@@ -24,9 +24,17 @@ import "./Style/HomePage.css";
 const App = () => {
   const [user, setUser] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [selectedMoto, setSelectedMoto] = useState(null);
+  const addToCart = (moto) => {
+    setSelectedMoto(moto)
+  };
+  const removeFromCart = () => {
+    setSelectedMoto(null); 
+  };
 
   return (
     <>
+    
       <AuthContext.Provider
         value={{ user, setUser, isAuthenticated, setIsAuthenticated }}
       >
@@ -38,8 +46,8 @@ const App = () => {
             <Route path="/inscription" element={<RegistrationPage />} />
             <Route path="/connexion" element={<LoginPage />} />
             <Route path="/homepage" element={<HomePage />} />
-            <Route path="/basket" element={<Basket />} />
-            <Route path="/catalog" element={<MotorCycleCatalogPage />} />
+            <Route path="/basket" element={<Basket selectedMoto={selectedMoto} removeFromCart={removeFromCart}/>} />
+            <Route path="/catalog" element={<MotorCycleCatalogPage addToCart={addToCart}/>} />
           </Routes>
           <Footer />
         </BrowserRouter>

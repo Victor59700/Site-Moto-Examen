@@ -116,6 +116,8 @@ return (
         <Link to="/homepage">
         <button onClick={inscription}>S'inscrire</button>
         </Link>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        
       </form>
     </div>
   </>
