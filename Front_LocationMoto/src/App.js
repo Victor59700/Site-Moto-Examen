@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import AuthContext from "./Context/AuthContext.js";
+import { UserProvider } from "./Context/UserContext.js"; // Importez le UserProvider
 
 // Components
 import Footer from "./Components/Footer.jsx";
@@ -34,13 +35,11 @@ const App = () => {
 
   return (
     <>
-    
+     <UserProvider>
       <AuthContext.Provider
-        value={{ user, setUser, isAuthenticated, setIsAuthenticated }}
-      >
+        value={{ user, setUser, isAuthenticated, setIsAuthenticated }}>
         <BrowserRouter>
           <Header />
-
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/inscription" element={<RegistrationPage />} />
@@ -49,9 +48,11 @@ const App = () => {
             <Route path="/basket" element={<Basket selectedMoto={selectedMoto} removeFromCart={removeFromCart}/>} />
             <Route path="/catalog" element={<MotorCycleCatalogPage addToCart={addToCart}/>} />
           </Routes>
+    
           <Footer />
         </BrowserRouter>
       </AuthContext.Provider>
+     
       <ToastContainer
         position="bottom-right"
         autoClose={3000}
@@ -62,9 +63,9 @@ const App = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="colored"
-      />
-    </>
+        theme="colored"/>
+    </UserProvider>
+    </>  
   );
 };
 

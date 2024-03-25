@@ -62,7 +62,7 @@ const LoginPage = () => {
           <input type="password" value={mdp} onChange={handlePasswordChange} />
         </label>
         <br />
-        <Link to="/homepage">
+        <Link to="/catalog">
         <button onClick={handleConnexion}>Se connecter</button>
         </Link>
       </form>

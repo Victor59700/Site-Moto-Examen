@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import MotoService from "../Services/MotoService";
 import '../Style/MotorCycleCatalogPage.css';
 import { Link } from "react-router-dom";
+import AuthContext from "../Context/AuthContext";
 
-const MotorCycleCatalogPage = ({ user, addToCart }) => {
+const MotorCycleCatalogPage = ({ addToCart }) => {
   const [motos, setMotos] = useState([]);
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     getMotos();
