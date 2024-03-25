@@ -3,7 +3,7 @@ import MotoService from "../Services/MotoService";
 import '../Style/MotorCycleCatalogPage.css';
 import { Link } from "react-router-dom";
 
-const MotorCycleCatalogPage = ({ addToCart }) => {
+const MotorCycleCatalogPage = ({ user, addToCart }) => {
   const [motos, setMotos] = useState([]);
 
   useEffect(() => {
@@ -16,6 +16,16 @@ const MotorCycleCatalogPage = ({ addToCart }) => {
       setMotos(response.data);
     } catch (error) {
       console.error("Error fetching moto data:", error);
+    }
+  };
+
+  const handleAddToCart = (moto) => {
+    if (user) {
+      addToCart(moto);
+    } else {
+      alert("Vous devez être connecté pour réserver une moto.");
+      // Rediriger l'utilisateur vers la page de connexion
+      window.location.href = "/connexion";
     }
   };
 
@@ -41,7 +51,7 @@ const MotorCycleCatalogPage = ({ addToCart }) => {
                 <p className="Permis"> Permis : {moto.permis}</p>
                 <p className="Description">Description : {moto.description}</p>
                 <p className="prix_journalier">Tarif journalier : {moto.prix_journalier} Euros</p>
-                <button className="btn card_btn" onClick={() => addToCart(moto)}>Réserver</button>
+                <button className="btn card_btn" onClick={() => handleAddToCart(moto)}>Réserver</button>
               </div> 
             </div>
           </li> 

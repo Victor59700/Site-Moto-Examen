@@ -1,14 +1,8 @@
 import React from "react";
 import "../Style/Basket.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Basket = ({ selectedMoto, removeFromCart }) => {
-  const navigate = useNavigate();
-
-  const handleValidation = () => {
-    navigate("/homepage");
-  };
-
+const Basket = ({ selectedMoto, removeFromCart, handleValidation }) => {
   const handleRemove = () => {
     removeFromCart();
   };
@@ -24,7 +18,6 @@ const Basket = ({ selectedMoto, removeFromCart }) => {
         <h2>Ma réservation</h2>
         {selectedMoto ? (
           <div className="SelectedMoto">
-            <h3>Moto sélectionnée :</h3>
             <p><img src={selectedMoto.image_url} alt={selectedMoto.modele} /></p>
             <p>Modèle : {selectedMoto.modele}</p>
             <p>Année : {selectedMoto.annee}</p>
